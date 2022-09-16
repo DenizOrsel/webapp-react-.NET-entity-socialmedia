@@ -1,4 +1,3 @@
-import { create } from "domain";
 import React, { ChangeEvent, useState } from "react";
 import { Segment, Form, Button } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
@@ -7,9 +6,10 @@ interface Props {
   activity: Activity | undefined;
   closeForm: () => void;
   createOrEdit: (activity: Activity) => void;
+  submitting: boolean;
 }
 
-const ActivityForm = ({ activity: selectedActivity, closeForm, createOrEdit }: Props) => {
+const ActivityForm = ({ activity: selectedActivity, closeForm, createOrEdit, submitting }: Props) => {
   const initialState = selectedActivity ?? {
     id: "",
     title: "",
@@ -73,7 +73,7 @@ const ActivityForm = ({ activity: selectedActivity, closeForm, createOrEdit }: P
           name="venue"
           onChange={handleInputChange}
         />
-        <Button floated="right" positive type="submit" content="Submit" />
+        <Button loading={submitting} floated="right" positive type="submit" content="Submit" />
         <Button
           onClick={closeForm}
           floated="right"
