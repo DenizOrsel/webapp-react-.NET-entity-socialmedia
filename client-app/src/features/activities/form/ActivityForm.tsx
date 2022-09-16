@@ -18,6 +18,7 @@ const ActivityForm = ({ activity: selectedActivity, closeForm, createOrEdit }: P
     date: "",
     city: "",
     venue: "",
+    imageId: "2",
   };
   const [activity, setActivity] = useState(initialState);
   const handleSubmit = () => {

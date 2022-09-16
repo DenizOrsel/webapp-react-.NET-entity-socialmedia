@@ -22,6 +22,7 @@ namespace Persistence
                     Category = "drinks",
                     City = "London",
                     Venue = "Pub",
+                    ImageId = "1"
                 },
                 new Activity
                 {
@@ -31,6 +32,7 @@ namespace Persistence
                     Category = "culture",
                     City = "Paris",
                     Venue = "Louvre",
+                    ImageId = "2"
                 },
                 new Activity
                 {
@@ -40,6 +42,7 @@ namespace Persistence
                     Category = "culture",
                     City = "London",
                     Venue = "Natural History Museum",
+                    ImageId = "3"
                 },
                 new Activity
                 {
@@ -49,6 +52,7 @@ namespace Persistence
                     Category = "music",
                     City = "London",
                     Venue = "O2 Arena",
+                    ImageId = "4"
                 },
                 new Activity
                 {
@@ -58,6 +62,7 @@ namespace Persistence
                     Category = "drinks",
                     City = "London",
                     Venue = "Another pub",
+                    ImageId = "5"
                 },
                 new Activity
                 {
@@ -67,6 +72,7 @@ namespace Persistence
                     Category = "drinks",
                     City = "London",
                     Venue = "Yet another pub",
+                    ImageId = "6"
                 },
                 new Activity
                 {
@@ -76,6 +82,7 @@ namespace Persistence
                     Category = "drinks",
                     City = "London",
                     Venue = "Just another pub",
+                    ImageId = "7"
                 },
                 new Activity
                 {
@@ -85,6 +92,7 @@ namespace Persistence
                     Category = "music",
                     City = "London",
                     Venue = "Roundhouse Camden",
+                    ImageId = "8"
                 },
                 new Activity
                 {
@@ -94,6 +102,7 @@ namespace Persistence
                     Category = "travel",
                     City = "London",
                     Venue = "Somewhere on the Thames",
+                    ImageId = "9"
                 },
                 new Activity
                 {
@@ -103,6 +112,7 @@ namespace Persistence
                     Category = "film",
                     City = "London",
                     Venue = "Cinema",
+                    ImageId = "10"
                 }
             };
 
