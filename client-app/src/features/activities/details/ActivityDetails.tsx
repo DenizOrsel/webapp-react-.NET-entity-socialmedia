@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react'
-import { Button, Card, Image } from 'semantic-ui-react'
+import { useEffect } from 'react'
+import { Grid } from 'semantic-ui-react'
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { useStore } from "../../../app/stores/store";
 import { useParams } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
-import { Link } from 'react-router-dom';
+import ActivityDetailedChat from './ActivityDetailedChat';
+import ActivityDetailedHeader from './ActivityDetailedHeader';
+import ActivityDetailedInfo from './ActivityDetailedInfo';
+import ActivityDetailedSideBar from './ActivityDetailedSideBar';
+
 
 const ActivityDetails = () => {
 
@@ -19,40 +23,17 @@ const ActivityDetails = () => {
   if(loadingInitial || !activity) return <LoadingComponent />;
  
   return (
-    <Card fluid>
-      <Image
-        src={`https://source.unsplash.com/random/800x800/?img=${activity.imageId}`}
-      />
-
-      <Card.Content>
-        <Card.Header>{activity.title}</Card.Header>
-        <Card.Meta>
-          <span>{activity.date}</span>
-        </Card.Meta>
-        <Card.Description>
-          {activity.description}
-        </Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <Button.Group widths="2">
-          <Button
-            as={Link}
-            to={`/manage/${activity.id}`}
-            basic
-            color="blue"
-            content="Edit"
-          />
-          <Button
-            as={Link}
-            to='/activities'
-            basic
-            color="grey"
-            content="Cancel"
-          />
-        </Button.Group>
-      </Card.Content>
-    </Card>
-  );
+<Grid>
+      <Grid.Column width={10}>
+        <ActivityDetailedHeader activity={activity} />
+        <ActivityDetailedInfo activity={activity} />
+        <ActivityDetailedChat  />
+      </Grid.Column>
+      <Grid.Column width={6}>
+        <ActivityDetailedSideBar />
+      </Grid.Column>
+    </Grid>
+  )
 }
 
 export default observer(ActivityDetails); 
